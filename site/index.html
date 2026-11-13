@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Y2K Stargirl Boutique | Moda Anos 2000s</title>
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Estilos Customizados -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon Y2K / Estrela -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦋</text></svg>">
+</head>
+
+<body>
+
+  <!-- Topbar Ticker Y2K -->
+  <aside class="topbar-ticker" aria-label="Avisos da Loja">
+    <div class="ticker-content">
+      <span>✨ <strong>Y2K NOSTALGIA DROP</strong> | Coleções Exclusivas Inverno ❄️ & Verão ☀️</span>
+      <span>⭐ <strong>STARSGIRL</strong> • Moda Anos 2000s</span>
+    </div>
+    <div class="topbar-links">
+      <a href="https://wa.me/55996187306" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> WhatsApp: (27) 99618-7306
+      </a>
+      <a href="admin/login.html" title="Acessar Painel do Administrador">
+        <i class="fas fa-lock"></i> Painel Admin
+      </a>
+    </div>
+  </aside>
+
+  <!-- Header / Barra de Navegação -->
+  <header class="site-header">
+    <div class="header-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <div class="logo-badge">🦋</div>
+        <div class="logo-text">
+          <h1>Y2K STARGIRL</h1>
+          <span>VINTAGE 2000s AESTHETIC</span>
+        </div>
+      </a>
+
+      <!-- Menu de Navegação -->
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-menu">
+          <li><a href="#catalogo" class="nav-link active" data-filter-season="todas"><i class="fas fa-star"></i>
+              Todos</a></li>
+          <li><a href="#catalogo" class="nav-link inverno" data-filter-season="inverno"><i class="fas fa-snowflake"></i>
+              Inverno</a></li>
+          <li><a href="#catalogo" class="nav-link verao" data-filter-season="verao"><i class="fas fa-sun"></i> Verão</a>
+          </li>
+          <li><a href="#catalogo" class="nav-link" data-filter-cat="Calçados"><i class="fas fa-shoe-prints"></i>
+              Calçados</a></li>
+          <li><a href="#catalogo" class="nav-link" data-filter-cat="Enfeites de Cabelo"><i
+                class="fas fa-wand-magic-sparkles"></i> Cabelo</a></li>
+          <li><a href="#catalogo" class="nav-link" data-filter-cat="Acessórios"><i class="fas fa-gem"></i>
+              Acessórios</a></li>
+        </ul>
+      </nav>
+
+      <!-- Ações: WhatsApp & Carrinho -->
+      <div class="header-actions">
+
+
+        <button class="btn-cart" id="btnOpenCart" aria-label="Abrir Sacola">
+          <i class="fas fa-shopping-bag"></i>
+          <span>Sacola</span>
+          <span class="cart-count-badge" id="cartBadgeCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Banner Y2K -->
+    <section class="hero-y2k">
+      <div class="hero-card">
+        <div class="hero-sparkle s1">✨</div>
+        <div class="hero-sparkle s2">🌸</div>
+        <div class="hero-sparkle s3">💖</div>
+
+        <div class="hero-content">
+          <div class="hero-badge-tag">
+            <i class="fas fa-bolt"></i> Nova Coleção 2000s Drop
+          </div>
+          <h2 class="hero-title">
+            Reviva o melhor da <span>Moda Y2K & Stargirl</span>
+          </h2>
+          <p class="hero-desc">
+            Roupas de inverno aconchegantes e looks de verão vibrantes, além de plataformas retrô,
+            presilhas borboleta e acessórios candy color para completar o seu visual vintage.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#catalogo" class="btn-hero-primary">
+              <i class="fas fa-bag-shopping"></i> Explorar Catálogo
+            </a>
+            <a href="https://wa.me/55996187306" target="_blank" rel="noopener noreferrer" class="btn-hero-wa">
+              <i class="fab fa-whatsapp"></i> Atendimento Rápido
+            </a>
+          </div>
+        </div>
+
+        <!-- Colagem Polaroids Anos 2000 -->
+
+      </div>
+    </section>
+
+    <!-- DIVISÓRIA TEMÁTICA: INVERNO ❄️ & VERÃO ☀️ -->
+    <section class="season-split-section" id="temporadas">
+      <div class="season-banner-container">
+        <!-- Card Inverno -->
+        <article class="season-card winter" data-season="inverno" tabindex="0" role="button"
+          aria-label="Ver Coleção de Inverno">
+          <div class="season-info">
+            <h3>❄️ Coleção Inverno Y2K</h3>
+            <p>Moletons oversized, jaquetas puffer holográficas, veludo molhado, cardigans peluciados e botas cano alto.
+            </p>
+            <span class="season-tag-btn">
+              <i class="fas fa-snowflake"></i> Ver Roupas de Inverno
+            </span>
+          </div>
+          <div class="season-badge-icon">
+            <i class="fas fa-snowflake" style="color: #67B6C8;"></i>
+          </div>
+        </article>
+
+        <!-- Card Verão -->
+        <article class="season-card summer" data-season="verao" tabindex="0" role="button"
+          aria-label="Ver Coleção de Verão">
+          <div class="season-info">
+            <h3>☀️ Coleção Verão Y2K</h3>
+            <p>Baby tees com glitter, saias plissadas colegiais, tops borboleta, vestidos tubinho e sandálias
+              plataforma.</p>
+            <span class="season-tag-btn">
+              <i class="fas fa-sun"></i> Ver Roupas de Verão
+            </span>
+          </div>
+          <div class="season-badge-icon">
+            <i class="fas fa-sun" style="color: #FF80A0;"></i>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXIBIÇÃO DE CATEGORIAS / PRODUTOS -->
+    <section class="categories-showcase" id="categoriesContainer">
+      <div class="loading-spinner">
+        <i class="fas fa-spinner fa-spin"></i>
+        <span>Carregando vitrine vintage dos anos 2000...</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL DE DETALHES DO PRODUTO -->
+  <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalProductTitle">
+    <div class="modal-dialog">
+      <button class="btn-close-modal" id="btnCloseModal" aria-label="Fechar Modal">&times;</button>
+
+      <div class="product-modal-grid">
+        <div class="modal-col-image">
+          <img id="modalProductImg" src="" alt="Produto Y2K">
+        </div>
+
+        <div class="modal-col-details">
+          <div class="modal-badge-row">
+            <span class="modal-badge" id="modalCategoryBadge">Categoria</span>
+            <span class="product-stock-tag" id="modalStockTag">Em Estoque</span>
+          </div>
+
+          <h3 class="modal-product-title" id="modalProductTitle">Nome do Produto</h3>
+          <div class="modal-product-price" id="modalProductPrice">R$ 0,00</div>
+          <p class="modal-product-desc" id="modalProductDesc">Descrição detalhada do produto.</p>
+
+          <!-- Seletor de Quantidade -->
+          <div class="modal-qty-container">
+            <span class="modal-qty-label">Quantidade:</span>
+            <div class="qty-control">
+              <button type="button" class="qty-btn" id="modalQtyMinus">-</button>
+              <input type="number" id="modalQtyInput" class="qty-display" value="1" min="1" readonly>
+              <button type="button" class="qty-btn" id="modalQtyPlus">+</button>
+            </div>
+          </div>
+
+          <!-- Botões de Ação -->
+          <div class="modal-actions">
+            <button type="button" class="btn-add-cart-large" id="modalBtnAddToCart">
+              <i class="fas fa-bag-shopping"></i> Adicionar à Sacola
+            </button>
+            <button type="button" class="btn-buy-wa-direct" id="modalBtnBuyWhatsApp">
+              <i class="fab fa-whatsapp"></i> Pedir no WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DRAWER DO CARRINHO -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop">
+    <aside class="cart-drawer" aria-label="Sacola de Compras">
+      <div class="cart-drawer-header">
+        <h3 class="cart-header-title">
+          <i class="fas fa-shopping-bag"></i> Sua Sacola
+        </h3>
+        <button class="btn-close-cart" id="btnCloseCart" aria-label="Fechar">&times;</button>
+      </div>
+
+      <div class="cart-items-container" id="cartItemsList"></div>
+
+      <div class="cart-drawer-footer">
+        <div class="cart-summary-line">
+          <span>Subtotal:</span>
+          <span id="cartSubtotal">R$ 0,00</span>
+        </div>
+        <div class="cart-summary-line">
+          <span>Frete estimado:</span>
+          <span style="color: #4CAF50; font-weight: 600;">A calcular no WhatsApp</span>
+        </div>
+        <div class="cart-total-line">
+          <span>Total:</span>
+          <span id="cartTotal">R$ 0,00</span>
+        </div>
+
+        <div class="customer-info-box">
+          <input type="text" id="custName" class="customer-input" placeholder="Seu Nome Completo">
+          <input type="text" id="custAddress" class="customer-input" placeholder="Endereço / Bairro de Entrega">
+          <select id="custPayment" class="customer-input">
+            <option value="Pix">Pagamento: Pix</option>
+            <option value="Cartão de Crédito">Pagamento: Cartão de Crédito</option>
+            <option value="Cartão de Débito">Pagamento: Cartão de Débito</option>
+            <option value="Dinheiro">Pagamento: Dinheiro</option>
+          </select>
+        </div>
+
+        <button type="button" class="btn-checkout-wa" id="btnCheckoutWhatsApp">
+          <i class="fab fa-whatsapp"></i> Finalizar Pedido no WhatsApp
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Botão Flutuante WhatsApp -->
+  <a href="https://wa.me/55996187306" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn"
+    title="WhatsApp: (27) 99618-7306">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Toast de Notificações -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h4>🦋 Y2K STARGIRL BOUTIQUE</h4>
+        <p>A sua loja dos sonhos inspirada na moda icônica dos anos 2000s.</p>
+        <p><strong>WhatsApp Oficial:</strong> (27) 99618-7306</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Coleções</h5>
+        <ul>
+          <li><a href="#catalogo" data-filter-season="inverno">Inverno ❄️</a></li>
+          <li><a href="#catalogo" data-filter-season="verao">Verão ☀️</a></li>
+          <li><a href="#catalogo" data-filter-cat="Calçados">Calçados</a></li>
+          <li><a href="#catalogo" data-filter-cat="Enfeites de Cabelo">Cabelo</a></li>
+          <li><a href="#catalogo" data-filter-cat="Acessórios">Acessórios</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Acesso</h5>
+        <ul>
+          <li><a href="https://wa.me/55996187306" target="_blank"><i class="fab fa-whatsapp"></i> Chamar no WhatsApp</a>
+          </li>
+          <li><a href="admin/login.html"><i class="fas fa-lock"></i> Painel Admin</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Y2K Stargirl Boutique. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script Principal -->
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STARGIRL | Painel Admin</title>
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Estilos do Painel -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⭐</text></svg>">
+</head>
+
+<body>
+
+  <!-- Layout em Grid 1fr / 4fr Conforme PROMPT MESTRE -->
+  <div class="admin-layout-grid">
+
+    <!-- ====================================================================
+         LATERAL (1fr): DADOS DO USUÁRIO, MÓDULOS DESCOBERTOS & LOGOUT
+         ==================================================================== -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-brand">
+        <div class="badge">⭐</div>
+        <div>
+          <h3>STARGIRL</h3>
+          <span>PAINEL ADMIN</span>
+        </div>
+      </div>
+
+      <!-- Card do Usuário Logado -->
+      <div class="sidebar-user-card">
+        <div class="user-avatar">
+          <i class="fas fa-user-gear"></i>
+        </div>
+        <div class="user-details">
+          <div class="user-name" id="sidebarUserName">Administrador</div>
+          <div class="user-email" id="sidebarUserEmail">admin@y2kstore.com</div>
+        </div>
+      </div>
+
+      <!-- Listagem Dinâmica dos Módulos Mapeados -->
+      <div class="sidebar-menu-title">Módulos do Sistema</div>
+      <ul class="sidebar-nav" id="sidebarModulesList">
+        <li class="sidebar-nav-item active" data-module="produtos">
+          <button type="button">
+            <i class="fas fa-box-open"></i>
+            <span>Produtos</span>
+          </button>
+        </li>
+        <li class="sidebar-nav-item" data-module="categorias">
+          <button type="button">
+            <i class="fas fa-tags"></i>
+            <span>Categorias</span>
+          </button>
+        </li>
+        <li class="sidebar-nav-item" data-module="lojas">
+          <button type="button">
+            <i class="fas fa-store"></i>
+            <span>Lojas & Mostruário</span>
+          </button>
+        </li>
+        <li class="sidebar-nav-item" data-module="pedidos">
+          <button type="button">
+            <i class="fab fa-whatsapp"></i>
+            <span>Pedidos WhatsApp</span>
+          </button>
+        </li>
+        <li class="sidebar-nav-item" data-module="metricas">
+          <button type="button">
+            <i class="fas fa-chart-pie"></i>
+            <span>Visão Geral & Métricas</span>
+          </button>
+        </li>
+      </ul>
+
+      <!-- Ações do Rodapé da Barra Lateral -->
+      <div class="sidebar-footer">
+        <a href="../index.html" class="btn-view-store" target="_blank" title="Abrir loja em nova aba">
+          <i class="fas fa-arrow-up-right-from-square"></i> Ver Loja Virtual
+        </a>
+        <button type="button" class="btn-logout" id="btnLogout">
+          <i class="fas fa-power-off"></i> Sair do Painel
+        </button>
+      </div>
+    </aside>
+
+    <!-- ====================================================================
+         CONTEÚDO (4fr): LISTAGEM DOS REGISTROS DA ENTIDADE & AÇÕES (CRUD)
+         ==================================================================== -->
+    <main class="admin-main">
+
+      <!-- Topbar do Conteúdo -->
+      <header class="admin-topbar">
+        <div class="admin-title-area">
+          <h2 id="moduleTitle">Gestão de Produtos</h2>
+          <p id="moduleSubtitle">Gerencie as peças vintage, fotos, preços e estoque da loja.</p>
+        </div>
+
+        <div class="admin-topbar-actions">
+          <!-- Seletor de Loja Ativa -->
+          <div class="store-selector-box" id="storeSelectorWrapper">
+            <i class="fas fa-store" style="color: var(--pastel-pink-dark)"></i>
+            <select id="activeStoreSelect" aria-label="Loja Selecionada">
+              <option value="1">Loja 1: Y2K Vintage Principal</option>
+            </select>
+          </div>
+
+          <!-- Botão de Criação no Canto Superior Direito (PROMPT MESTRE) -->
+          <button type="button" class="btn-create-record" id="btnOpenCreateModal">
+            <i class="fas fa-plus"></i> <span id="btnCreateText">Criar Produto</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Container Dinâmico do Módulo Selecionado -->
+      <section id="moduleContentArea">
+        <!-- Injetado dinamicamente via admin.js -->
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- ==========================================================================
+       MODAL DINÂMICO DE CRIAÇÃO / EDIÇÃO (CRUD)
+       Baseado nas colunas reais mapeadas do SQL (PROMPT MESTRE)
+       ========================================================================== -->
+  <div class="admin-modal-overlay" id="crudModalOverlay" role="dialog" aria-modal="true">
+    <div class="admin-modal-card">
+      <div class="admin-modal-header">
+        <h3 id="crudModalTitle">Novo Registro</h3>
+        <button type="button" class="btn-close-admin-modal" id="btnCloseCrudModal">&times;</button>
+      </div>
+
+      <form id="crudDynamicForm">
+        <input type="hidden" id="crudRecordId" value="">
+
+        <!-- Campos gerados dinamicamente de acordo com a entidade -->
+        <div class="modal-form-grid" id="crudFormFields">
+          <!-- Injetado dinamicamente -->
+        </div>
+
+        <div class="admin-modal-footer">
+          <button type="button" class="btn-cancel" id="btnCancelCrudModal">Cancelar</button>
+          <button type="submit" class="btn-primary" id="btnSubmitCrudModal" style="width: auto;">
+            <i class="fas fa-floppy-disk"></i> Salvar Registro
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast de Feedback -->
+  <div style="position: fixed; bottom: 24px; right: 24px; z-index: 2000;" id="adminToastBox"></div>
+
+  <!-- Script do Admin -->
+  <script src="admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+node_modules
+.env
+.env.local
+api/node_modules
+api/.env
+api/.env.local
+api/uploads/*
+!api/uploads/.gitkeep
+.vercel
+.DS_Store
+Thumbs.db
+public/
+api/public/

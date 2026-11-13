@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecionando...</title>
+  <script>
+    const user = localStorage.getItem('y2k_admin_user');
+    if (user) {
+      window.location.replace('dashboard.html');
+    } else {
+      window.location.replace('login.html');
+    }
+  </script>
+</head>
+
+<body>
+  <p>Redirecionando para o painel administrativo...</p>
+</body>
+
+</html>
